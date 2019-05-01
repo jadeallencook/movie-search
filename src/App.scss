@@ -1,0 +1,48 @@
+@import './style.global.scss';
+
+.App {
+  margin: 25px;
+
+  input.search,
+  ul#results {
+    width: 300px;
+  }
+
+  input.search {
+    border: none;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    font-size: 1.1em;
+    border-bottom: solid #333 thin;
+  }
+
+  ul#results {
+    padding: 0px;
+    list-style: none;
+    margin: 0px;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    li {
+      background-color: $white;
+      color: $grey;
+      display: block;
+      padding: 8px 10px;
+      white-space: nowrap;
+    }
+
+    li:not(.no-results):hover,
+    li.selected {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+
+  span.error {
+    color: #df6464;
+    font-size: 0.75em;
+    display: block;
+    margin-top: 50px;
+  }
+}
